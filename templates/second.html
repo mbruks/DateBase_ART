@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Вторая страница
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<div class="row g-5">
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Живопись</h4>
+        <form method="post" class="needs-validation" novalidate="">
+           <h4 class="mb-3">Добавление</h4>
+          <div class="row g-3">
+            <div class="col-sm-6">
+                  <label for="intro" class="form-label">ФИО художника</label>
+              <input type="text" class="form-control" id="intro" >
+            </div>
+               <div class="col-sm-6">
+              <label for="title" class="form-label">Название картины</label>
+              <input type="text" class="form-control" id="title" >
+               </div>
+
+              <div class="col-sm-6">
+              <label for="birthday" class="form-label">Дата рождения художника</label>
+                <input type="text" class="form-control" id="birthday" placeholder="дд.мм.гггг." required="">
+              </div>
+
+            <div class="col-sm-6">
+              <label for="text" class="form-label">Дата создания картины </label>
+              <input type="text" class="form-control" id="text" placeholder="дд.мм.гггг.">
+            </div>
+
+            <div class="col-12">
+              <label for="style" class="form-label">Тип картины</label>
+              <input type="text" class="form-control" id="style">
+            </div>
+
+            <div class="col-12">
+              <label for="technic" class="form-label">Техника</label>
+              <input type="text" class="form-control" id="technic">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Страна создания</label>
+              <select class="form-select" id="country">
+                <option value="">Выберите</option>
+                <option>Россия</option>
+                  <option>Италия</option>
+                  <option>Германия</option>
+                  <option>Франция</option>
+                  <option>Англия</option>
+                  <option>Чехия</option>
+                  <option>Польша</option>
+              </select>
+            </div>
+
+          <hr class="my-4">
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+{% endblock %}

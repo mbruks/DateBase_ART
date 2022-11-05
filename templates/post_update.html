@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Изменение данных
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<div class="row g-5">
+      <div class="col-md-7 col-lg-8">
+        <form method="post" class="needs-validation" novalidate="">
+           <h4 class="mb-3">Изменение данных</h4>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="intro" class="form-label">ФИО художника</label>
+              <input type="text" name="intro" id="intro" class="form-control" value="{{ arts.intro }}"><br>
+              <label for="title" class="form-label">Название картины</label>
+              <textarea name="title" id="title" class="form-control"  >{{ arts.title }}</textarea><br>
+              <label for="birthday" class="form-label">Дата рождения художника</label>
+              <textarea name="birthday" id="birthday" class="form-control"  >{{ arts.birthday }}</textarea><br>
+              <label for="text" class="form-label">Дата создания картины </label>
+              <textarea name="text" id="text" class="form-control"  >{{ arts.text }}</textarea><br>
+              <label for="style" class="form-label">Тип картины</label>
+              <textarea name="style" id="style" class="form-control"  >{{ arts.style }}</textarea><br>
+              <label for="technic" class="form-label">Техника</label>
+              <textarea name="technic" id="technic" class="form-control" >{{ arts.technic }}</textarea><br>
+              <label for="country" class="form-label">Страна создания</label>
+              <textarea name="country" id="country" class="form-control" >{{ arts.country }}</textarea><br>
+              <hr class="my-4">
+              <input type = "submit"  class = "btn btn-success" value="Отправить">
+            </div>
+          </div>
+        </form>
+      </div>
+</div>
+</div>
+{% endblock %}
+
